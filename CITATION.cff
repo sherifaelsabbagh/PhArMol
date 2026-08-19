@@ -4,13 +4,13 @@ title: "PhArMol: Ligand-Based Pharmacophore Modeling Natively in PyMOL"
 version: 1.0.0
 date-released: "2026-08-19"
 license: MIT
-repository-code: "https://github.com/OWNER/pharmol"
+repository-code: "https://github.com/sherifaelsabbagh/pharmol"
 type: software
 authors:
-  - family-names: "TODO"
-    given-names: "TODO"
-    affiliation: "TODO"
-    orcid: "https://orcid.org/0000-0000-0000-0000"
+  - family-names: Elsabbagh
+    given-names: Sherif
+    affiliation: Galala University
+    orcid: "https://orcid.org/0000-0002-4348-7723"
 keywords:
   - pharmacophore modeling
   - cheminformatics
