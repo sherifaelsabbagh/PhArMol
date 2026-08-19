@@ -8,9 +8,7 @@ Fluoroquinolones are a large, real family of antibiotics (ciprofloxacin, levoflo
 
 14 real, FDA-or-internationally-approved fluoroquinolones were used as known actives, pasted directly into Tab 1's
 
-Known Actives
-
-box:
+Known Actives box:
 
 - ciprofloxacin, levofloxacin, ofloxacin, norfloxacin, moxifloxacin, gatifloxacin, gemifloxacin, sparfloxacin, lomefloxacin, pefloxacin, enoxacin, fleroxacin, balofloxacin, pazufloxacin
 
