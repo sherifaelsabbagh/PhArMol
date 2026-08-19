@@ -2,7 +2,6 @@
 
 **Ligand-based pharmacophore modeling, natively inside PyMOL.**
 
-[![Tests](https://github.com/OWNER/pharmol/actions/workflows/tests.yml/badge.svg)](https://github.com/OWNER/pharmol/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 PhArMol takes a handful of known active compounds against a drug target, builds a
