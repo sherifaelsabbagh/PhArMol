@@ -60,7 +60,7 @@ Because for this drug class, the shared core **is** the mechanism, not an accide
 
 ## 7. Step 6 — Screening a Real Library
 
-The model was then used to screen 200 real compounds from a public screening library (ZINC), with no pre-filtering. The results form a natural companion to the validation: this checks not just “does the model recognize real fluoroquinolones” but “does it correctly reject compounds that aren't.”
+The model was then used to screen 200 real compounds from Enamine, with no pre-filtering. The results form a natural companion to the validation: this checks not just “does the model recognize real fluoroquinolones” but “does it correctly reject compounds that aren't.”
 
 | Result | Count | % of library |
 |-------------------------------|-----------|------------------|
