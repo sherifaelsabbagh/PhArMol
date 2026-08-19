@@ -1,0 +1,13 @@
+Cc1ccc(-c2cc(C(F)(F)F)nn2-c2ccc(S(N)(=O)=O)cc2)cc1 celecoxib
+CS(=O)(=O)c1ccc(C2=C(c3ccccc3)C(=O)OC2)cc1 rofecoxib
+Cc1onc(-c2ccccc2)c1-c1ccc(S(N)(=O)=O)cc1 valdecoxib
+CCOC(=O)[C@H](CC1=CC=CC=C1)N[C@@H](C)C(=O)N2CCC[C@H]2C(=O)O enalapril
+CCOC(=O)[C@H](CCC1=CC=CC=C1)N[C@@H](C)C(=O)N2[C@H]3CCC[C@H]3C[C@H]2C(O)=O ramipril
+CCC(C)(C)C(=O)O[C@H]1C[C@H](C=C2[C@H]1[C@H]([C@H](C=C2)C)CC[C@@H]3C[C@H](CC(=O)O3)O)C simvastatin
+N#C[C@@H]1CCCN1C(=O)CNC12CC3CC(CC(O)(C3)C1)C2 vildagliptin
+Fc1cc(c(F)cc1F)C[C@@H](N)CC(=O)N3Cc2nnc(n2CC3)C(F)(F)F sitagliptin
+O=C(N1[C@H](C#N)C[C@@H]2C[C@H]12)[C@@H](N)C35CC4CC(C3)CC(O)(C4)C5 saxagliptin
+CC(C)NCC(O)COC1=CC=C(C=C1)CC(=O)N atenolol
+NCCCC[C@H](N[C@@H](CC1=CC=CC=C1)C(=O)O)C(=O)N2CCC[C@H]2C(=O)O lisinopril
+CN2C(=O)C=C(N3CCC[C@@H](N)C3)N(CC4=C(C=CC=C4)C#N)C2=O alogliptin
+CC1=NN2C=C(C=NC2=C1)C(=O)NCC(C)(C)NCC(=O)N3CCC[C@H]3C#N anagliptin

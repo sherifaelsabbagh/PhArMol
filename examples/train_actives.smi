@@ -1,0 +1,14 @@
+ciprofloxacin, O=C(O)c1cn(C2CC2)c2cc(N3CCNCC3)c(F)cc2c1=O
+levofloxacin, C[C@H]1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+ofloxacin, CC1COc2c(N3CCN(C)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23
+norfloxacin, CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNCC3)cc21
+moxifloxacin, COc1c(N2C[C@@H]3CCCN[C@@H]3C2)c(F)cc2c(=O)c(C(=O)O)cn(C3CC3)c12
+gatifloxacin, COc1c(N2CCNC(C)C2)c(F)cc2c(=O)c(C(=O)O)cn(C3CC3)c12
+gemifloxacin, CO/N=C1\CN(c2nc3c(cc2F)c(=O)c(C(=O)O)cn3C2CC2)CC1CN
+sparfloxacin, C[C@@H]1CN(c2c(F)c(N)c3c(=O)c(C(=O)O)cn(C4CC4)c3c2F)C[C@H](C)N1
+lomefloxacin, CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNC(C)C3)c(F)c21
+pefloxacin, CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCN(C)CC3)cc21
+enoxacin, CCn1cc(C(=O)O)c(=O)c2cc(F)c(N3CCNCC3)nc21
+fleroxacin, CN1CCN(c2c(F)cc3c(=O)c(C(=O)O)cn(CCF)c3c2F)CC1
+balofloxacin, CNC1CCCN(c2c(F)cc3c(=O)c(C(=O)O)cn(C4CC4)c3c2OC)C1
+pazufloxacin, C[C@H]1COc2c(C3(N)CC3)c(F)cc3c(=O)c(C(=O)O)cn1c23

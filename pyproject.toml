@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pharmol"
+version = "1.0.0"
+description = "PhArMol: ligand-based pharmacophore modeling as a PyMOL plugin, with a one-command launcher"
+requires-python = ">=3.8"
+dependencies = [
+    "rdkit",
+]
+
+[project.scripts]
+pharmol-gui = "pharmol.launcher:main"
+
+[tool.setuptools]
+packages = ["pharmol"]
