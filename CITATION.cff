@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use PhArMol in your work, please cite it as below."
+title: "PhArMol: Ligand-Based Pharmacophore Modeling Natively in PyMOL"
+version: 1.0.0
+date-released: "2026-08-19"
+license: MIT
+repository-code: "https://github.com/OWNER/pharmol"
+type: software
+authors:
+  - family-names: "TODO"
+    given-names: "TODO"
+    affiliation: "TODO"
+    orcid: "https://orcid.org/0000-0000-0000-0000"
+keywords:
+  - pharmacophore modeling
+  - cheminformatics
+  - PyMOL
+  - drug discovery
+  - RDKit
+  - virtual screening
