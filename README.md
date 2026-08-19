@@ -77,18 +77,9 @@ CI runs the same suite on every push and pull request (see badge above).
 
 See [CITATION.cff](CITATION.cff), or cite directly:
 
-> *
-title: "PhArMol: Ligand-Based Pharmacophore Modeling Natively in PyMOL"
-version: 1.0.0
-date-released: "2026-08-19"
-license: MIT
-repository-code: "https://github.com/sherifaelsabbagh/pharmol"
-type: software
-authors:
-  - family-names: Elsabbagh
-    given-names: Sherif
-    affiliation: Galala University
-    orcid: "https://orcid.org/0000-0002-4348-7723"*
+> Elsabbagh, S. (2026). *PhArMol: Ligand-Based Pharmacophore Modeling Natively in
+> PyMOL* (Version 1.0.0) [Computer software]. Galala University.
+> https://github.com/sherifaelsabbagh/pharmol
 
 ## Contributing
 
