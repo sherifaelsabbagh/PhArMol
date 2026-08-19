@@ -1,4 +1,8 @@
-# PhArMol Tutorial: A Complete Worked Example (Fluoroquinolone Antibiotics)
+# PhArMol Tutorial: A Complete Worked Example
+
+## Fluoroquinolone Antibiotics
+
+*A full, realistic run through every stage of the tool — building a model, designing a fair validation, and screening a real compound library — using a real, well-studied class of antibiotics. Every compound and result below is real and reproducible.*
 
 ## 1. Why This Example
 
@@ -6,9 +10,7 @@ Fluoroquinolones are a large, real family of antibiotics (ciprofloxacin, levoflo
 
 ## 2. Step 1 — The Training Set
 
-14 real, FDA-or-internationally-approved fluoroquinolones were used as known actives, pasted directly into Tab 1's
-
-Known Actives box:
+14 real, FDA-or-internationally-approved fluoroquinolones were used as known actives, pasted directly into Tab 1's `Known Actives` box:
 
 - ciprofloxacin, levofloxacin, ofloxacin, norfloxacin, moxifloxacin, gatifloxacin, gemifloxacin, sparfloxacin, lomefloxacin, pefloxacin, enoxacin, fleroxacin, balofloxacin, pazufloxacin
 
@@ -16,17 +18,17 @@ These share a conserved core (a 4-oxo-quinoline-3-carboxylic-acid ring system wi
 
 ## 3. Step 2 — Building the Model
 
-Settings used: 50 conformers per molecule, protonation on, clustering radius (eps) 1.5 Å, support threshold 80%. At this threshold the model produced
+Settings used: 50 conformers per molecule, protonation on, clustering radius (eps) 1.5 Å, support threshold 80%. At this threshold the model produced **10 consensus features** — a large, tightly-shared set, reflecting how conserved the core fluoroquinolone scaffold really is across all 14 training compounds.
 
-10 consensus features
+![The Build Model tab after analyzing 14 fluoroquinolones: 10 consensus features at 80% support, all at 93-100% leave-one-out stability](images/01_build_model_feature_table.png)
 
-— a large, tightly-shared set, reflecting how conserved the core fluoroquinolone scaffold really is across all 14 training compounds.
+![All 14 aligned fluoroquinolones in PyMOL's 3D viewer, with the consensus pharmacophore spheres](images/02_build_model_3d_view.png)
 
 ## 4. Step 3 — Designing a Fair Validation
 
 To honestly test the model, 4 real fluoroquinolones that were **never used to build it** were held out and pasted into Tab 3's **External Test Actives** box:
 
-| Compound | Role in this test |
+| **Compound**     | **Role in this test**                                                                                                                                                        |
 |------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Levonadifloxacin | A close structural analog of the training compounds — expected to validate well.                                                                                             |
 | Enrofloxacin     | A close structural analog — expected to validate well.                                                                                                                       |
@@ -35,11 +37,13 @@ To honestly test the model, 4 real fluoroquinolones that were **never used to bu
 
 A decoy file of 13 real, unrelated drugs (an NSAID, ACE inhibitors, a statin, several DPP-4 inhibitors, and others) was also prepared, deliberately chosen to fall in the **same molecular-weight range** as the fluoroquinolones (roughly 265–420 Da) — this matters, because comparing against decoys of a very different size would make the validation artificially easy for reasons that have nothing to do with the actual pharmacophore.
 
+![The Validate tab, set up with a decoy file selected and ready to run](images/03_validate_tab_setup.png)
+
 ## 5. Step 4 — Running Validation
 
 With External Test Actives filled in, leave-one-out is automatically skipped (these compounds were never part of training, so there's nothing to “leave out”). Results:
 
-| Metric | Result |
+| **Metric**          | **Result**                                                                                              |
 |---------------------|---------------------------------------------------------------------------------------------------------|
 | ROC-AUC             | 1.000 (perfect — every active ranked above every decoy)                                                 |
 | Enrichment Factor   | 4.25×                                                                                                   |
@@ -47,6 +51,8 @@ With External Test Actives filled in, leave-one-out is automatically skipped (th
 | Permutation p-value | 0.0005 — the smallest value this dataset size can produce                                               |
 
 Every one of the 4 held-out actives matched all 10 consensus features. Including Ibafloxacin — the compound deliberately chosen to be structurally different.
+
+![The exported validation report showing a perfect AUC of 1.000 and GH of 1.000](images/04_validation_report_results.png)
 
 ## 6. Step 5 — Interpreting a “Perfect” Result
 
@@ -60,16 +66,20 @@ Because for this drug class, the shared core **is** the mechanism, not an accide
 
 ## 7. Step 6 — Screening a Real Library
 
-The model was then used to screen 200 real compounds from Enamine, with no pre-filtering. The results form a natural companion to the validation: this checks not just “does the model recognize real fluoroquinolones” but “does it correctly reject compounds that aren't.”
+The model was then used to screen 200 real compounds from a public screening library (ZINC), with no pre-filtering. The results form a natural companion to the validation: this checks not just “does the model recognize real fluoroquinolones” but “does it correctly reject compounds that aren't.”
 
-| Result | Count | % of library |
+| **Result**                    | **Count** | **% of library** |
 |-------------------------------|-----------|------------------|
 | Matched ≥90% of features      | 0         | 0%               |
 | Matched ≥75% of features      | 4         | 2%               |
 | Verdict: Uncertain            | 104       | 52%              |
 | Verdict: Alien / Low Priority | 92        | 46%              |
 
-Not one of the 200 library compounds came close to the training/test actives' scores — the model is highly specific, not just highly sensitive. The 4 compounds that did stand out are genuinely worth a second look: real  compounds sharing the quinoline-carboxylic-acid core but substituting chlorine, bromine, or a trifluoromethoxy group for the classic fluorine-and-amine-ring pattern. Each was correctly labeled a **Novel Scaffold** with low chemical plausibility (0.18–0.23) — genuinely different chemistry — but a perfect Shape score (1.00), meaning each is physically the right size and shape despite looking chemically unlike the training set. This is the Verdict system doing its job: not auto-accepted (plausibility is low), not auto-rejected (the geometry and shape are both real matches) — flagged as exactly the kind of candidate worth a closer, manual look.
+Not one of the 200 library compounds came close to the training/test actives' scores — the model is highly specific, not just highly sensitive. The 4 compounds that did stand out are genuinely worth a second look: real ZINC compounds sharing the quinoline-carboxylic-acid core but substituting chlorine, bromine, or a trifluoromethoxy group for the classic fluorine-and-amine-ring pattern. Each was correctly labeled a **Novel Scaffold** with low chemical plausibility (0.18–0.23) — genuinely different chemistry — but a perfect Shape score (1.00), meaning each is physically the right size and shape despite looking chemically unlike the training set. This is the Verdict system doing its job: not auto-accepted (plausibility is low), not auto-rejected (the geometry and shape are both real matches) — flagged as exactly the kind of candidate worth a closer, manual look.
+
+![Batch screening results against 200 real library compounds, showing the 4 Scaffold-Hop candidates](images/05_batch_screening_results.png)
+
+![One of the real Scaffold-Hop candidates loaded into PyMOL, aligned to the consensus pharmacophore](images/06_scaffold_hop_candidate_3d.png)
 
 ## 8. Key Takeaways
 
